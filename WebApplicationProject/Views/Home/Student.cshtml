@@ -1,0 +1,28 @@
+﻿
+@{
+    ViewBag.Title = "Student";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+@using WebApplicationProject.Models
+@model List<Student>
+
+<div class="container">
+    <div class="row">
+        @foreach (var item in Model)
+        {
+            <div class="card col-sm-6" style="width: 18rem;">
+                <img class="card-img-top" src="~/assets/img/portfolio/Me1.jpg" alt="Card image cap">
+                <div class="card-body">
+                    <h5 class="card-title">Name : @item.SrudentName</h5>
+                    <p class="card-text">Address : @item.Address</p>
+                    <p class="card-text">Email : @item.Email</p>
+                    <p class="card-text">Age : @item.Age</p>
+                    <p class="card-text">Teacher Name : @item.Teacher</p>
+                    <a href="#" class="btn btn-primary">Details</a>
+                </div>
+            </div>
+        }
+    </div>
+</div>
+
